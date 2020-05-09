@@ -19,7 +19,7 @@ def get_japanese_emoticon(path, emoji)
       return translations[:japanese]
     end 
   end
-  "Sorry, that emoticon was not found"
+  "Sorry, that emoticon was not found" #based on expected output of the tests.
 end
 
 def get_english_meaning(path, emoji)
