@@ -4,6 +4,8 @@ require 'pry'
 def load_library(path)
   emojis = YAML.load_file(path)
   restructured_hash = {}
+  
+  #Each key is the english meaning and it is currently associated with an array where the first element is the english version of the emoji and the second element is the Japanese version of the emoji. 
   emojis.each do |key, array_emojis|
     emojis[key] = { english: array_emojis[0], japanese: array_emojis[1] }
   end 
