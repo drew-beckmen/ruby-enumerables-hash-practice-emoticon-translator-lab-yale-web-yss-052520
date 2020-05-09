@@ -10,7 +10,14 @@ def load_library(path)
   emojis
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(path, emoji)
+  dictionary = load_library(path)
+  dictionary.each do |english_meaning, translations|
+    if translations[:english] == emoji 
+      return translations[:japanese]
+    end 
+  "Sorry, that emoticon was not found"
+  end
   
 end
 
