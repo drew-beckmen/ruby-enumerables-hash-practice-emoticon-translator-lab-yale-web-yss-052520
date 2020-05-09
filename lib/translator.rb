@@ -17,7 +17,7 @@ end
 def get_english_meaning(path, emoji)
   dictionary = load_library(path)
   dictionary.each do |english_meaning, translations|
-    if translation[:japanese] == emoji 
+    if translations[:japanese] == emoji 
       return english_meaning
     end 
   end 
